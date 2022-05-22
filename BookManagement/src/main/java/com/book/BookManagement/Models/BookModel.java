@@ -13,4 +13,6 @@ public class BookModel {
 	private String category;
 	private Integer quantity;
 	private String imageUrl;
+	private String rftf;
+	
 }
