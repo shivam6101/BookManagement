@@ -40,3 +40,19 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+db.json
+src/app/card/
+src/app/crud.service.spec.ts
+src/app/crud.service.ts
+src/app/dashboard-layout/
+src/app/dashboard/
+src/app/login/
+src/app/material-components/
+src/app/navbar/
+src/app/not-found/
+src/app/order/
+src/app/products/
+src/app/signup/
+src/app/user.spec.ts
+src/app/user.ts
+tailwind.config.js
