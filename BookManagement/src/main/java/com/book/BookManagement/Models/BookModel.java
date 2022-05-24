@@ -12,7 +12,7 @@ public class BookModel {
 	@NotNull(message = "book name can not be null")
 	private String bookName;
 	private String desc;
-	private String price;
+	private Integer price;
 	private String category;
 	private Integer quantity;
 	private String imageUrl;
@@ -23,7 +23,7 @@ public class BookModel {
 		// TODO Auto-generated constructor stub
 	}
 
-	public BookModel(String id, String bookName, String desc, String price, String category, Integer quantity,
+	public BookModel(String id, String bookName, String desc, Integer price, String category, Integer quantity,
 			String imageUrl, String authorName) {
 		super();
 		this.id = id;
@@ -60,11 +60,11 @@ public class BookModel {
 		this.desc = desc;
 	}
 
-	public String getPrice() {
+	public Integer getPrice() {
 		return price;
 	}
 
-	public void setPrice(String price) {
+	public void setPrice(Integer price) {
 		this.price = price;
 	}
 

@@ -33,7 +33,14 @@ public class UserService {
 		List<BookModel> cartBooks = user.getUserCart();
 		cartBooks.add(book);
 		user.setUserCart(cartBooks);
+		return userRepository.save(user);
+	}
 
+	public UserModel removeBookFromCart(BookModel book, Optional<UserModel> usr) {
+		UserModel user = usr.get();
+		List<BookModel> cartBooks = user.getUserCart();
+		cartBooks.remove(book);
+		user.setUserCart(cartBooks);
 		return userRepository.save(user);
 	}
 

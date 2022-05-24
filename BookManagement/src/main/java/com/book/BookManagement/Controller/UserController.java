@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -27,7 +28,7 @@ public class UserController {
 	@Autowired
 	UserService userService;
 
-	@PostMapping("/adduser")
+	@PostMapping()
 	public ResponseEntity<?> addUser(@RequestBody UserModel user) {
 		System.out.print(user);
 		try {
@@ -49,7 +50,18 @@ public class UserController {
 		}
 	}
 
-	@GetMapping("/getallusers")
+	@DeleteMapping("/deletefromcart/{id}")
+	public ResponseEntity<?> removeBookFromCart(@PathVariable String id, @RequestBody BookModel book) {
+		try {
+			Optional<UserModel> usr = userService.getUserById(id);
+			UserModel user = userService.removeBookFromCart(book, usr);
+			return new ResponseEntity<>("Book removed from cart", HttpStatus.OK);
+		} catch (Exception e) {
+			return new ResponseEntity<>(e.getMessage(), HttpStatus.NOT_FOUND);
+		}
+	}
+
+	@GetMapping()
 	public ResponseEntity<?> getUserDetails() {
 		List<UserModel> usersList = userService.getAllUsers();
 		return new ResponseEntity<>(usersList, usersList.size() > 0 ? HttpStatus.OK : HttpStatus.NOT_FOUND);
