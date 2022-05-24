@@ -25,7 +25,7 @@ public class BookController {
 	@Autowired
 	BookService bookService;
 
-	@PostMapping("/addbook")
+	@PostMapping()
 	public ResponseEntity<?> addBook(@RequestBody BookModel book) {
 		try {
 			bookService.addBook(book);
@@ -35,13 +35,13 @@ public class BookController {
 		}
 	}
 
-	@GetMapping("/getbooks")
+	@GetMapping()
 	public ResponseEntity<?> getAllBooks() {
 		List<BookModel> bookList = bookService.getBooksList();
 		return new ResponseEntity<>(bookList, bookList.size() > 0 ? HttpStatus.OK : HttpStatus.NOT_FOUND);
 	}
 
-	@PutMapping("/updatebook")
+	@PutMapping()
 	public ResponseEntity<?> updateBook(@RequestBody BookModel book) {
 		try {
 			bookService.updateBook(book);
@@ -51,7 +51,7 @@ public class BookController {
 		}
 	}
 
-	@DeleteMapping("/deletebook/{id}")
+	@DeleteMapping("/{id}")
 	public ResponseEntity<?> deleteBookById(@PathVariable String id) {
 		try {
 			bookService.deleteBookById(id);
@@ -61,7 +61,7 @@ public class BookController {
 		}
 	}
 
-	@GetMapping("/bookcategory/{category}")
+	@GetMapping("/{category}")
 	public ResponseEntity<?> getBookByCategory(@PathVariable String category) {
 		List<BookModel> bookListByCat = bookService.getBookByCategory(category);
 		return new ResponseEntity<>(bookListByCat, bookListByCat.size() > 0 ? HttpStatus.OK : HttpStatus.NOT_FOUND);
