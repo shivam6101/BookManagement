@@ -1,0 +1,73 @@
+<nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Book World</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a
+            class="nav-link active fs-6"
+            aria-current="page"
+            routerLink="/dashboard"
+            >Home</a
+          >
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link fs-6" routerLink="/products/add-product"
+            >Add-Book</a
+          >
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link fs-6" routerLink="/products/product-table"
+            >Book-Table</a
+          >
+        </li>
+      </ul>
+      <form role="search">
+        <input
+          #search
+          class="form-control me-2 s-bar"
+          type="search"
+          placeholder="Search"
+          aria-label="Search"
+          (keyup)="serchData(search)"
+        />
+      </form>
+      <ul class="navbar-nav me-auto mb-1 logReg hover:text-indigo-100">
+        <button class="btn b-login">
+          <li class="nav-item fs-6">
+            <a class="nav-link active font-black" routerLink="/login">Login</a>
+          </li>
+        </button>
+        <button class="btn text-center b-regi">
+          <li class="nav-item fs-6">
+            <a class="nav-link active font-black" routerLink="/signup"
+              >Register</a
+            >
+          </li>
+        </button>
+        <button class="btn text-center b-regi">
+          <li class="nav-item fs-6">
+            <a class="nav-link active font-black" routerLink="/signup"
+              >Logout</a
+            >
+          </li>
+        </button>
+      </ul>
+      <i
+        class="bi bi-cart cart-icon mr-6 text-indigo-100"
+        style="font-size: 2rem"
+      ></i>
+    </div>
+  </div>
+</nav>

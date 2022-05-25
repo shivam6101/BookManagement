@@ -1,0 +1,136 @@
+<!-- Content -->
+<div class="w-full bg-grey-lightest" style="padding-top: 4rem">
+  <div class="container mx-auto py-8">
+    <div class="w-5/6 lg:w-1/2 mx-auto bg-white rounded shadow">
+      <div class="py-4 px-8 text-black text-xl border-b border-grey-lighter">
+        Register for a free account
+      </div>
+
+      <form
+        [formGroup]="signUpForm"
+        class="form-control"
+        (ngSubmit)="addDataonSubmit()"
+      >
+        <div class="py-4 px-8">
+          <div class="mb-4">
+            <label
+              class="block text-grey-darker text-sm font-bold mb-2"
+              for="first_name"
+            >
+              Name</label
+            >
+            <input
+              formControlName="name"
+              class="appearance-none border rounded w-full py-2 px-3 text-grey-darker"
+              id="name"
+              type="text"
+              placeholder="Your Name"
+            />
+            <div
+              class="mt-2.5"
+              *ngIf="
+                signUpForm.controls['name'].dirty &&
+                signUpForm.hasError('required', 'name')
+              "
+            >
+              <span class="text-danger">Enter Your Name</span>
+            </div>
+          </div>
+          <div class="mb-4">
+            <label
+              class="block text-grey-darker text-sm font-bold mb-2"
+              for="email"
+              >Email Address</label
+            >
+            <input
+              formControlName="email"
+              name="email"
+              class="appearance-none border rounded w-full py-2 px-3 text-grey-darker"
+              id="email"
+              type="email"
+              placeholder=" Your Email"
+            />
+            <div
+              class="mt-2.5"
+              *ngIf="
+                signUpForm.controls['email'].dirty &&
+                signUpForm.hasError('required', 'email')
+              "
+            >
+              <span class="text-danger">Enter Valid Email</span>
+            </div>
+          </div>
+          <div class="mb-4">
+            <label
+              class="block text-grey-darker text-sm font-bold mb-2"
+              for="email"
+              >Mobile</label
+            >
+            <input
+              formControlName="mobile"
+              class="appearance-none border rounded w-full py-2 px-3 text-grey-darker"
+              id="last_name"
+              type="text"
+              placeholder="Your mobile"
+            />
+            <div
+              class="mt-2.5"
+              *ngIf="
+                signUpForm.controls['mobile'].dirty &&
+                signUpForm.hasError('required', 'mobile')
+              "
+            >
+              <span class="text-danger">Mobile should have 10 digits.</span>
+            </div>
+          </div>
+          <div class="mb-4">
+            <label
+              class="block text-grey-darker text-sm font-bold mb-2"
+              for="password"
+              >Password</label
+            >
+            <input
+              formControlName="password"
+              class="appearance-none border rounded w-full py-2 px-3 text-grey-darker"
+              id="last_name"
+              type="password"
+              placeholder="Enter password"
+            />
+            <div
+              class="mt-2.5"
+              *ngIf="
+                signUpForm.controls['password'].dirty &&
+                signUpForm.hasError('required', 'password')
+              "
+            >
+              <span class="text-danger"
+                >Password should be min 6 and max 20 character long.</span
+              >
+            </div>
+            <p class="text-grey text-xs mt-1">At least 6 characters</p>
+          </div>
+          <div class="flex items-center justify-between mt-8">
+            <!-- Submit button -->
+            <button
+              type="submit"
+              class="inline-block px-7 py-3 bg-indigo-400 text-white font-medium text-sm leading-snug uppercase rounded shadow-md hover:bg-indigo-700 hover:shadow-lg focus:bg-indigo-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out w-full"
+              data-mdb-ripple="true"
+              data-mdb-ripple-color="light"
+              [disabled]="!signUpForm.valid"
+            >
+              Sign Up
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <p class="text-center my-4">
+      <a
+        routerLink="/login"
+        class="text-grey-dark text-sm no-underline hover:text-grey-darker"
+        >I already have an account</a
+      >
+    </p>
+  </div>
+</div>

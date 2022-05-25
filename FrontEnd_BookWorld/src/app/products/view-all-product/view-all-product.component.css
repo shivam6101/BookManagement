@@ -1,0 +1,13 @@
+.mb-10 {
+  margin-bottom: 2.5rem;
+  /* border: 1px solid black; */
+}
+.card-img-top {
+  max-width: 100%;
+  max-height: 210px;
+  /* border: 2px solid green; */
+}
+
+.font-black {
+  font-size: 15px;
+}

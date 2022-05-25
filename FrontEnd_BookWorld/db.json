@@ -1,0 +1,229 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "catagories": [
+    {
+      "id": 1,
+      "category": "comedy"
+    },
+    {
+      "id": 2,
+      "category": "friction"
+    },
+    {
+      "id": 3,
+      "category": "fantacy"
+    },
+    {
+      "id": 4,
+      "category": "Haunted"
+    }
+  ],
+  "cardData": [
+    {
+      "id": 1,
+      "title": "card1",
+      "": "some comment",
+      "price": 1,
+      "rating": 4
+    },
+    {
+      "id": 2,
+      "title": "card1",
+      "": "some comment",
+      "price": 1,
+      "rating": 4
+    },
+    {
+      "id": 3,
+      "title": "card1",
+      "": "some comment",
+      "price": 1,
+      "rating": 4
+    },
+    {
+      "id": 4,
+      "title": "card1",
+      "": "some comment",
+      "price": 1,
+      "rating": 4
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "user2",
+      "email": "user1@gmial.com",
+      "password": "123"
+    },
+    {
+      "id": 2,
+      "name": "user2",
+      "email": "user2@gmial.com",
+      "password": "123"
+    },
+    {
+      "firstName": "ARTI",
+      "lastName": "DHOLE",
+      "email": "aratidhole1234@gmail.com",
+      "mobile": "09529125229",
+      "password": "nmsnx m",
+      "id": 3
+    },
+    {
+      "firstName": "ARTI",
+      "lastName": "DHOLE",
+      "email": "aratidhole1234@gmail.com",
+      "mobile": "09529125229",
+      "password": "sdcssc",
+      "id": 4
+    },
+    {
+      "firstName": "ARTI",
+      "lastName": "DHOLE",
+      "email": "aratidhole1234@gmail.com",
+      "mobile": "09529125229",
+      "password": "frf",
+      "id": 5
+    },
+    {
+      "firstName": "test1",
+      "email": "test@gmail.com",
+      "mobile": "782798090",
+      "password": "123",
+      "id": 6
+    },
+    {
+      "id": 7
+    },
+    {
+      "name": "test2",
+      "email": "test2@gmail.com",
+      "mobile": "09529125229",
+      "password": "test2",
+      "id": 8
+    },
+    {
+      "name": "",
+      "email": "",
+      "mobile": "",
+      "password": "",
+      "id": 9
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "bookName": "harrypotter",
+      "category": "comedy",
+      "desc": "Book covers album covers and movie covers are copyrightable. However fair use a provision of U.S. copyright law gives users the right to use copyrighted material without permission under certain circumstances. If a use is fair the user need not notify or seek permission from the copyright holder",
+      "imageUrl": "https://images-na.ssl-images-amazon.com/images/I/51kM7CkgKWL.jpg",
+      "price": 300,
+      "quantity": 40,
+      "rating": 4,
+      "review": "vhjxhj",
+      "authorName": "Agatha Christie"
+    },
+    {
+      "id": 2,
+      "bookName": "rich dad poor dad",
+      "category": "friction",
+      "desc": "Bowker Book Data relies on our comprehensive data collection process in order to maintain a high rate of quality control. As the exclusive ISBN agency in the United States and Australia",
+      "imageUrl": "https://www.oreilly.com/library/view/concepts-of-database/9789332537422/images/cover.jpg",
+      "price": 300,
+      "quantity": 40,
+      "rating": 4,
+      "review": "vhjxhj",
+      "authorName": "Vasdev Mohi"
+    },
+    {
+      "id": 3,
+      "bookName": "netherlands",
+      "category": "Haunted",
+      "desc": "Bowker Book Data relies on our comprehensive data collection process in order to maintain a high rate of quality control. As the exclusive ISBN agency in the United States and Australia",
+      "imageUrl": "https://images.squarespace-cdn.com/content/v1/5c71c7d8aadd342945360ba1/1586723509001-E5NQB7VLS1R9NS0EOSOM/Harry+Potter+and+the+Philosopher%27s+Stone+Original+Children%27s+Edition+Cover.jpg",
+      "price": 300,
+      "quantity": 40,
+      "rating": 4,
+      "review": "vhjxhj",
+      "authorName": "Richard Powers"
+    },
+    {
+      "id": 4,
+      "bookName": "Principles of Database Systems",
+      "category": "Nature",
+      "desc": "Bowker Book Data relies on our comprehensive data collection process in order to maintain a high rate of quality control. As the exclusive ISBN agency in the United States and Australia",
+      "imageUrl": "https://i.pinimg.com/736x/78/8d/13/788d13699f655a0d4292141acae4b060--cambridge-university-diffusion.jpg",
+      "price": 300,
+      "quantity": 40,
+      "rating": 4,
+      "review": "vhjxhj",
+      "authorName": "Jokha Alharthi"
+    },
+    {
+      "id": 5,
+      "bookName": "the wonders",
+      "category": "comedy",
+      "desc": "Bowker Book Data relies on our comprehensive data collection process in order to maintain a high rate of quality control. As the exclusive ISBN agency in the United States and Australia",
+      "imageUrl": "https://images-na.ssl-images-amazon.com/images/I/51kM7CkgKWL.jpg",
+      "price": 300,
+      "quantity": 40,
+      "rating": 4,
+      "review": "vhjxhj",
+      "authorName": "Agatha Christie"
+    },
+    {
+      "id": 6,
+      "bookName": "System Concepts",
+      "category": "friction",
+      "desc": "Bowker Book Data relies on our comprehensive data collection process in order to maintain a high rate of quality control. As the exclusive ISBN agency in the United States and Australia",
+      "imageUrl": "https://www.oreilly.com/library/view/concepts-of-database/9789332537422/images/cover.jpg",
+      "price": 300,
+      "quantity": 40,
+      "rating": 4,
+      "review": "vhjxhj",
+      "authorName": "Agatha"
+    },
+    {
+      "id": 7,
+      "bookName": "Database System Concepts",
+      "category": "Haunted",
+      "desc": "Bowker Book Data relies on our comprehensive data collection process in order to maintain a high rate of quality control. As the exclusive ISBN agency in the United States and Australia",
+      "imageUrl": "https://m.media-amazon.com/images/I/51ITBUEmJYL._SL500_.jpg",
+      "price": 300,
+      "quantity": 40,
+      "rating": 4,
+      "review": "vhjxhj",
+      "authorName": "Jokha"
+    },
+    {
+      "categary": "Drama",
+      "bookName": "ARTI DHOLE",
+      "authorName": "jkjk",
+      "description": "hjvxshbx",
+      "price": 23232,
+      "Quantity": -1,
+      "id": 8
+    },
+    {
+      "categary": "Friction",
+      "bookName": "ARTI DHOLE",
+      "authorName": "mn",
+      "description": "sxdxcf",
+      "price": 4535,
+      "Quantity": -1,
+      "id": 9
+    },
+    {
+      "description": "",
+      "price": "",
+      "Quantity": "",
+      "id": 10
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+<!-- <h1 class="my-4">Book World</h1> -->
+
+<div class="list-group">
+  <h3 class="text-center text-pink-600">Catagory</h3>
+  <a
+    #myElement
+    routerlink="/dashboard"
+    class="list-group-item text-center text-pink-600 thisitem"
+    (click)="getCatagory(myElement.innerText)"
+    *ngFor="let c of filtered"
+    >{{ c.category }}</a
+  >
+
+  <h3 class="text-center text-pink-600 mt-4">Author</h3>
+  <a
+    #Element
+    routerlink="/dashboard"
+    class="list-group-item text-center text-pink-600 thisitem"
+    (click)="getCatagory(Element.innerText)"
+    *ngFor="let c of filteredAuthor"
+    >{{ c.authorName }}</a
+  >
+</div>

@@ -1,0 +1,38 @@
+<h1 class="bg-light text-purple-500 m-5 fs-10 text-center">All Book Details</h1>
+
+<table class="table table-bordered table-hover">
+  <thead class="text-center">
+    <tr class="d-flex" class="text-center" class="p-4">
+      <th scope="col">#</th>
+      <th scope="col">Book Name</th>
+      <th scope="col">Author</th>
+      <th scope="col">Description</th>
+      <th scope="col">Price</th>
+      <th scope="col">Quantity</th>
+      <th scope="col">Image</th>
+      <th scope="col">Edit</th>
+      <th scope="col">Delete</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="d-flex" class="text-center" *ngFor="let book of ProductData">
+      <th scope="row">{{ book.id }}</th>
+      <td class="p-4">{{ book.bookName }}</td>
+      <td class="p-4">{{ book.authorName }}</td>
+      <td class="p-4">{{ book.desc }}</td>
+      <td class="p-4">{{ book.price }}</td>
+      <td class="p-4">{{ book.quantity }}</td>
+      <td class="word-wrap p-4">{{ book.img }}</td>
+      <!-- <td class="word-wrap p-4">{{ book.imageUrl }}</td> -->
+      <td class="p-4">
+        <i class="bi bi-pencil-fill text-indigo-400 fs-5"></i>
+      </td>
+      <td class="p-4">
+        <i
+          (click)="Deletebook(book.id)"
+          class="bi bi-trash3-fill text-red-500 fs-5 p-1"
+        ></i>
+      </td>
+    </tr>
+  </tbody>
+</table>

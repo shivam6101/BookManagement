@@ -1,0 +1,40 @@
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+
+.nav {
+  position: sticky;
+  z-index: 1;
+  top: 0;
+  width: 100%;
+}
+
+.navbar {
+  height: 100px;
+}
+.navbar-brand {
+  padding-left: 4%;
+  margin-right: 10%;
+}
+.me-2 {
+  padding: 13px;
+  width: 360px;
+  margin-left: 20px;
+}
+.btn {
+  padding: 5px !important;
+  margin-left: 10px;
+  width: 100px;
+}
+.navbar-nav .nav-link.active {
+  margin-right: 46px;
+}
+.logreg {
+  margin-left: 100px;
+}
+
+/* .s-bar {
+  margin-right: 30rem !important;
+}
+
+.navbar-nav .nav-link.active {
+  margin-right: 35px;
+} */
