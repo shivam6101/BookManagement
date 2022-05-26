@@ -3,6 +3,7 @@ package com.book.BookManagement.Controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -16,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.book.BookManagement.Models.BookModel;
+import com.book.BookManagement.Models.Index;
 import com.book.BookManagement.Service.BookService;
 
 @RestController
@@ -41,9 +43,10 @@ public class BookController {
 		return new ResponseEntity<>(bookList, bookList.size() > 0 ? HttpStatus.OK : HttpStatus.NOT_FOUND);
 	}
 
-	@PutMapping()
-	public ResponseEntity<?> updateBook(@RequestBody BookModel book) {
+	@PutMapping("/{id}")
+	public ResponseEntity<?> updateBook(@RequestBody BookModel book, @PathVariable String id) {
 		try {
+			book.setId(id);
 			bookService.updateBook(book);
 			return new ResponseEntity<>("Updated Book With Book Id " + book.getId(), HttpStatus.OK);
 		} catch (Exception e) {
@@ -65,5 +68,23 @@ public class BookController {
 	public ResponseEntity<?> getBookByCategory(@PathVariable String category) {
 		List<BookModel> bookListByCat = bookService.getBookByCategory(category);
 		return new ResponseEntity<>(bookListByCat, bookListByCat.size() > 0 ? HttpStatus.OK : HttpStatus.NOT_FOUND);
+	}
+
+	@PostMapping("/page")
+
+	public ResponseEntity<?> getTenBooks(@RequestBody Index index) {
+		Page<BookModel> bookList = bookService.booksPage(index.getStartIndex(), index.getEndIndex());
+		List<BookModel> books = bookList.getContent();
+		return new ResponseEntity<>(books, bookList.getSize() > 0 ? HttpStatus.OK : HttpStatus.NOT_FOUND);
+	}
+
+	@GetMapping("/bookscount")
+	public ResponseEntity<?> getTotalBooks() {
+		try {
+			long totalCount = bookService.getTotalBooks();
+			return new ResponseEntity(totalCount, HttpStatus.OK);
+		} catch (Exception e) {
+			return new ResponseEntity<>(e.getMessage(), HttpStatus.NOT_FOUND);
+		}
 	}
 }

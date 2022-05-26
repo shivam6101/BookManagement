@@ -1,0 +1,107 @@
+<ng-container *ngIf="product.length != 0">
+  <div class="container table">
+    <div class="card-table" class="mb-10">
+      <div class="cart-product">
+        <table class="table table-bordered mt-6 mb-10">
+          <thead class="text-center">
+            <tr class="d-flex" class="text-center" class="p-4">
+              <th scope="col">#</th>
+              <th scope="col">Image</th>
+              <th scope="col">Book Name</th>
+              <th scope="col">Author</th>
+              <!-- <th scope="col">Description</th> -->
+              <th scope="col">Price</th>
+              <th scope="col">Quantity</th>
+              <th scope="col">Total</th>
+              <th scope="col">Total Price</th>
+              <th scope="col">Remove</th>
+              <th scope="col">Buy Now</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr
+              class="d-flex"
+              class="text-center"
+              *ngFor="let book of product; let i = index"
+            >
+              <th scope="row">{{ i + 1 }}</th>
+              <td class="p-4">
+                <img src="{{ book.imageUrl }}" alt="" width="100px" />
+              </td>
+              <td class="p-2" style="width: 10%">{{ book.bookName }}</td>
+              <td class="p-2" style="width: 10%">{{ book.authorName }}</td>
+              <!-- <td class="p-4">{{ book.desc }}</td> -->
+              <td class="p-2">{{ book.price }}</td>
+              <td class="p-2">
+                <i
+                  (click)="dec(book)"
+                  class="bi bi-bag-dash-fill text-red-500 fs-4 p-1"
+                ></i>
+                {{ book.quantity }}
+                <i
+                  class="bi bi-bag-plus-fill text-red-500 fs-4 p-1"
+                  (click)="inc(book)"
+                ></i>
+              </td>
+              <td class="p-2">{{ book.total }}</td>
+              <th scope="col">{{ book.TotalPrice }}</th>
+              <!-- <th scope="col">{{ book.total * book.quantity }}</th> -->
+              <td class="p-4">
+                <i
+                  (click)="removeItem(book)"
+                  class="bi bi-trash3-fill text-red-500 fs-4 p-1"
+                ></i>
+              </td>
+              <td class="p-4">
+                <i class="bi bi-bag-heart text-pink-500 fs-4 p-1"></i>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="8">
+                <button
+                  class="btn btn-danger mr-30 ml-40"
+                  (click)="emptyCart()"
+                >
+                  Empty Cart
+                </button>
+
+                <button
+                  class="btn btn-primary mr-30 ml-40"
+                  routerLink="/dashboard"
+                >
+                  Want more
+                </button>
+
+                <button class="btn btn-success mr-30 ml-40">Checkout</button>
+              </td>
+              <td colspan="2">
+                <h4>
+                  <strong>GrandTotal : Rs.{{ grandTotal }}</strong>
+                </h4>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <!-- bbbb -->
+</ng-container>
+
+<ng-container *ngIf="product.length == 0">
+  <div class="container">
+    <div class="card">
+      <h4 class="card-title">My Cart</h4>
+    </div>
+    <div class="center">
+      <img
+        src="https://www.mentormyboard.com/assets/img/empty-cart.png"
+        alt=""
+      />
+      <h2>Your cart is empty!</h2>
+      <h4>Add Book to it now</h4>
+      <div class="btn btn-primary" routerLink="/dashboard">Shop Now</div>
+    </div>
+  </div>
+</ng-container>
+<router-outlet></router-outlet>
