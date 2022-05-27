@@ -82,7 +82,7 @@ public class UserController {
 		try {
 			Optional<UserModel> usr = userService.getUserById(id);
 			UserModel user = userService.addBookToCart(book, usr);
-			return new ResponseEntity<>("Book Added to cart succesfully", HttpStatus.OK);
+			return new ResponseEntity<>(user, HttpStatus.OK);
 		} catch (Exception e) {
 			return new ResponseEntity<>(e.getMessage(), HttpStatus.NOT_FOUND);
 		}
