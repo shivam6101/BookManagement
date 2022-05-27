@@ -9,7 +9,15 @@ Run `ng serve -o` for a dev server. Navigate to `http://localhost:4200/`. The ap
 
 ## 
 
+### Books Dashboard
 
+Navigate to `http://localhost:4200/dashboard`.
+
+### Books login
+Navigate to `http://localhost:4200/login`.
+
+### Books Registration
+Navigate to `http://localhost:4200/register`.
 
 ## Running Spring Boot project(Backend)
 
