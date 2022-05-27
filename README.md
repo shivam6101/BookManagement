@@ -5,7 +5,7 @@
 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.0-next.9.
-we have used Spring Boot ,MongoDb And SpringSecirity
+we have used Spring Boot ,MongoDb And SpringSecurity
 
 
 ## Running Spring Boot project(Backend)
