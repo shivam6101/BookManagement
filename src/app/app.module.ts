@@ -16,10 +16,8 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { OrderModule } from './order/order.module';
 import { DashboardLayoutModule } from './dashboard-layout/dashboard-layout.module';
 import { ProductsModule } from './products/products.module';
-//import { FilterPipe } from './shared/filter.pipe';
 //import { ViewAllProductComponent } from './products/view-all-product/view-all-product.component';
 
-import { Ng2SearchPipeModule } from 'ng2-search-filter';
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,7 +39,6 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
     OrderModule,
     DashboardLayoutModule,
     ProductsModule,
-    Ng2SearchPipeModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
