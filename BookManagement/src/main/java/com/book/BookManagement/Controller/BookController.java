@@ -37,7 +37,7 @@ public class BookController {
 		}
 	}
 
-	@GetMapping()
+	@GetMapping("/allbooks")
 	public ResponseEntity<?> getAllBooks() {
 		List<BookModel> bookList = bookService.getBooksList();
 		return new ResponseEntity<>(bookList, bookList.size() > 0 ? HttpStatus.OK : HttpStatus.NOT_FOUND);

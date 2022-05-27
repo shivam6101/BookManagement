@@ -44,4 +44,10 @@ public class UserService {
 		return userRepository.save(user);
 	}
 
+	public List<BookModel> getCartBooks(String id) {
+		Optional<UserModel> user = getUserById(id);
+		return user.get().getUserCart();
+
+	}
+
 }
